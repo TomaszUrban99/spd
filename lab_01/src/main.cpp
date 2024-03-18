@@ -6,9 +6,7 @@ int main (int argc, char **argv){
 
     task_list new_list;
 
-    new_list.read(argv[1]);
-
-    new_list.print();
-
+    std::cout << "Minimalny czas: " << new_list.jackson(argv[1]) << std::endl;
+    
     return 0;
 }

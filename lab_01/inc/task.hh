@@ -41,10 +41,14 @@ class task {
     void set_p ( int new_p ) { _p = new_p; }
 
     /************************************************/
+
+    
 };
 
+/*! \brief Input operator overload for class task */
 std::istream& operator>>( std::istream& input, task& new_task);
 
+/*! \brief Output operator overload for class task */
 std::ostream& operator<<( std::ostream& output, task& task_to_write );
 
 #endif

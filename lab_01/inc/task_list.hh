@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 
 #include "task.hh"
 
@@ -10,6 +11,8 @@ class task_list {
 
     int _size = 0;
     task* _list_of_elements = NULL;
+
+    int partition ( int start, int end );
 
     public:
 
@@ -40,6 +43,13 @@ class task_list {
     /*! \brief Print list of tasks */
     void print ();
 
+    void quicksort( int start, int end );
+
+    /***********************************************************/
+
+    /******************** FUNCTIONALITIES **********************/
+
+    int jackson( char *file_name );
 
 };
 
