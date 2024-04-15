@@ -1,0 +1,5 @@
+/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles/task.dir
+/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles/problem_rpq.dir
+/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles/rpq.dir
+/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles/edit_cache.dir
+/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles/rebuild_cache.dir

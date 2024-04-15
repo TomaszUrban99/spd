@@ -1,0 +1,2 @@
+/usr/bin/ar qc libproblem_rpq.a CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o
+/usr/bin/ranlib libproblem_rpq.a
