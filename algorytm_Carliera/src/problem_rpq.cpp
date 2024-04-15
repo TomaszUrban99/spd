@@ -183,6 +183,8 @@ int problem_rpq::schrage( std::vector<zadanie> &gotowa_lista ){
             _gotowe_do_realizacji.pop_back();
 
             t += gotowa_lista[k].get_pa();
+            gotowa_lista[k].set_t(t);
+
             Cmax = std::max(Cmax, t + gotowa_lista[k].get_q());
 
             k++;
@@ -205,23 +207,18 @@ int problem_rpq::preschrage(){
 
     zadanie zadanie_l ( 0, 0, 100000 );
 
+    int zbior_zadan_index = _zbior_zadan.size()-1;
+
     int Cmax = 0;
 
-    for ( int i = 0; i < _zbior_zadan.size(); ++i ){
-        std::cout << _zbior_zadan[i];
-    }
+    while ( (zbior_zadan_index>=0) || !(_gotowe_do_realizacji.empty()) ){
 
-    while ( !(_zbior_zadan.empty()) || !(_gotowe_do_realizacji.empty()) ){
-
-        std::cout << "Czas: " << t << std::endl;
-
-        while ( !_zbior_zadan.empty() && (_zbior_zadan.back().get_r() <= t) ){
+        while ( (zbior_zadan_index>=0) && _zbior_zadan[zbior_zadan_index].get_r() <= t){
             
             /* Na koniec zbioru _gotowe_do_realizacji umieść zadanie o najmniejszym r */
-            _gotowe_do_realizacji.push_back(std::move(_zbior_zadan.back()));
+            _gotowe_do_realizacji.push_back(_zbior_zadan[zbior_zadan_index]);
 
-            /* Usuń ostatni element z listy */
-            _zbior_zadan.pop_back();
+            zbior_zadan_index--;
 
             if (_gotowe_do_realizacji.back().get_q() > zadanie_l.get_q() ){
        
@@ -235,7 +232,7 @@ int problem_rpq::preschrage(){
         }
 
         if ( _gotowe_do_realizacji.empty() ){
-            t = _zbior_zadan.back().get_ra();
+            t = _zbior_zadan[zbior_zadan_index].get_ra();
         }
         else
         {
@@ -255,6 +252,26 @@ int problem_rpq::preschrage(){
     return Cmax;
 }
 
+int problem_rpq::wylicz_koniec ( int end, std::vector<zadanie> &permutacja ){
+
+}
+
+int problem_rpq::wyznacz_b ( int Cmax, std::vector<zadanie> &permutacja ){
+
+    int i = permutacja.size() - 1;
+
+    while ( Cmax != 
+        permutacja[i].get_t() + permutacja[i].get_q() ){
+            --i;
+        }
+
+    return i;
+}
+
+int problem_rpq::wyznacz_c ( std::vector<zadanie> &permutacja ){
+
+}
+
 std::vector<zadanie>& problem_rpq::carlier( int UB, std::vector<zadanie> &permutacja ){
 
     int U = schrage(permutacja);
@@ -263,6 +280,10 @@ std::vector<zadanie>& problem_rpq::carlier( int UB, std::vector<zadanie> &permut
         UB = U;
         _gotowa_lista = std::move(permutacja);
     }
+
+
+
+
 }
 
 /*int problem_rpq::carlier(){

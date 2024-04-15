@@ -28,7 +28,8 @@ std::istream& operator>>( std::istream& input, zadanie& new_task){
 std::ostream& operator<<( std::ostream& output, zadanie& task_to_write ){
 
     output  << task_to_write.get_id() << " " << task_to_write.get_r() << " "
-            << task_to_write.get_p() << " " << task_to_write.get_q() << std::endl;
+            << task_to_write.get_p() << " " << task_to_write.get_q() << " "
+            << task_to_write.get_t() << std::endl;
         
     return output;
 }

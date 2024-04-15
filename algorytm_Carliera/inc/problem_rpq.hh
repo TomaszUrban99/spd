@@ -45,11 +45,13 @@ class problem_rpq{
 
     int preschrage ();
 
-    int wyznacz_b ();
+    int wylicz_koniec ( int end, std::vector<zadanie> &permutacja );
 
-    int wyznacz_a ();
+    int wyznacz_b ( int Cmax, std::vector<zadanie> &permutacja );
 
-    int wyznacz_c ();
+    int wyznacz_a ( std::vector<zadanie> &permutacja );
+
+    int wyznacz_c ( std::vector<zadanie> &permutacja );
 
     int carlier ();
 
