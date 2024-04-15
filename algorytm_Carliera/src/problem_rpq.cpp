@@ -146,7 +146,7 @@ int problem_rpq::read ( char *file_name ){
 return i;
 }
 
-int problem_rpq::schrage(){
+int problem_rpq::schrage( std::vector<zadanie> &gotowa_lista ){
 
     /*
         Sortowanie zbioru zadan na podstawie czasu
@@ -156,42 +156,34 @@ int problem_rpq::schrage(){
     
     int t = 0;
     int k = 0;
+
+    int zbior_zadan_index = _zbior_zadan.size()-1;
  
     int Cmax = 0;
 
-    while ( !(_zbior_zadan.empty()) || !(_gotowe_do_realizacji.empty()) ){
+    while ( (zbior_zadan_index >= 0) || !(_gotowe_do_realizacji.empty()) ){
 
-        while ( !_zbior_zadan.empty() && (_zbior_zadan.back().get_r() <= t) ){
-            
-            std::cout << "Przed: " << _zbior_zadan.size() << std::endl;
-            std::cout << _zbior_zadan.back();
+        while ( (zbior_zadan_index >=0) && (_zbior_zadan[zbior_zadan_index].get_r() <= t) ){
 
             /* Na koniec zbioru _gotowe_do_realizacji umieść zadanie o najmniejszym r */
-            _gotowe_do_realizacji.push_back(std::move(_zbior_zadan.back()));
+            _gotowe_do_realizacji.push_back(_zbior_zadan[zbior_zadan_index]);
 
             /* Usuń ostatni element z listy */
-            _zbior_zadan.pop_back();
-            std::cout << "Po: " << _zbior_zadan.size() << std::endl;
+            zbior_zadan_index--;
         }
 
         if ( _gotowe_do_realizacji.empty() ){
-            t = _zbior_zadan.back().get_ra();
+            t = _zbior_zadan[zbior_zadan_index].get_ra();
         }
         else
         {
-            quicksort_gotowe_do_realizacji(0,_gotowe_do_realizacji.size()-1);
-
-            std::cout << "jjj" << std::endl;
-            for ( int i = 0; i < _gotowe_do_realizacji.size(); ++i ){
-                std::cout << _gotowe_do_realizacji[i];
-            }
-            std::cout << "-------" << std::endl;
+            quicksort_gotowe_do_realizacji(0,_gotowe_do_realizacji.size()-1);            
             
-            _gotowa_lista[k] = std::move(_gotowe_do_realizacji.back());
+            gotowa_lista[k] = std::move(_gotowe_do_realizacji.back());
             _gotowe_do_realizacji.pop_back();
 
-            t += _gotowa_lista[k].get_pa();
-            Cmax = std::max(Cmax, t + _gotowa_lista[k].get_q());
+            t += gotowa_lista[k].get_pa();
+            Cmax = std::max(Cmax, t + gotowa_lista[k].get_q());
 
             k++;
         }
@@ -262,6 +254,24 @@ int problem_rpq::preschrage(){
 
     return Cmax;
 }
+
+std::vector<zadanie>& problem_rpq::carlier( int UB, std::vector<zadanie> &permutacja ){
+
+    int U = schrage(permutacja);
+
+    if ( U < UB ){
+        UB = U;
+        _gotowa_lista = std::move(permutacja);
+    }
+}
+
+/*int problem_rpq::carlier(){
+
+    int UB = 1000000000000000;
+
+    carlier(UB);
+
+}*/
 
 void problem_rpq::print(){
 

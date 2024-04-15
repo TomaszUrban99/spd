@@ -18,6 +18,8 @@ class problem_rpq{
 
     std::vector<zadanie> _gotowe_do_realizacji;
 
+    int _UB = -1;
+
     void init();
 
     public:
@@ -39,11 +41,19 @@ class problem_rpq{
 
     void print ();
 
-    int schrage ();
+    int schrage ( std::vector<zadanie> &gotowa_lista);
 
     int preschrage ();
 
+    int wyznacz_b ();
+
+    int wyznacz_a ();
+
+    int wyznacz_c ();
+
     int carlier ();
+
+    std::vector<zadanie>& carlier ( int UB, std::vector<zadanie> &permutacja );
 
     void quicksort_zbior_zadan( int start, int end );
 

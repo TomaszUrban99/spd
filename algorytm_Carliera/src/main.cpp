@@ -9,7 +9,16 @@ int main ( int argc, char **argv ){
 
     pr.read(argv[1]);
 
-    std::cout << pr.preschrage() << std::endl;
+    std::cout << "Zbior zadan przed: " << std::endl;
+    pr.print();
+
+    std::vector<zadanie> gotowa_lista;
+    gotowa_lista.resize(pr.get_size());
+
+    std::cout << pr.schrage(gotowa_lista) << std::endl;
+
+    std::cout << "Zbior zadan po: " << std::endl;
+    pr.print();
 
     return 0;
 }
