@@ -186,61 +186,14 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/problem_rpq.hh \
+  /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/Schrage.hh \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  /usr/include/c++/11/algorithm \
-  /usr/include/c++/11/utility \
-  /usr/include/c++/11/bits/stl_relops.h \
-  /usr/include/c++/11/bits/stl_algo.h \
-  /usr/include/c++/11/bits/algorithmfwd.h \
-  /usr/include/c++/11/bits/stl_heap.h \
-  /usr/include/c++/11/bits/stl_tempbuf.h \
-  /usr/include/c++/11/bits/uniform_int_dist.h \
-  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/11/functional \
-  /usr/include/c++/11/tuple \
-  /usr/include/c++/11/array \
-  /usr/include/c++/11/bits/uses_allocator.h \
-  /usr/include/c++/11/bits/invoke.h \
-  /usr/include/c++/11/bits/refwrap.h \
-  /usr/include/c++/11/bits/std_function.h \
-  /usr/include/c++/11/unordered_map \
-  /usr/include/c++/11/ext/aligned_buffer.h \
-  /usr/include/c++/11/bits/hashtable.h \
-  /usr/include/c++/11/bits/hashtable_policy.h \
-  /usr/include/c++/11/bits/enable_special_members.h \
-  /usr/include/c++/11/bits/node_handle.h \
-  /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/bits/erase_if.h \
-  /usr/include/c++/11/pstl/execution_defs.h \
-  /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/zadanie.hh
+  /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/Zadanie.hh
 
-
-/usr/include/c++/11/bits/erase_if.h:
-
-/usr/include/c++/11/bits/enable_special_members.h:
-
-/usr/include/c++/11/bits/hashtable_policy.h:
-
-/usr/include/c++/11/bits/hashtable.h:
-
-/usr/include/c++/11/bits/refwrap.h:
-
-/usr/include/c++/11/bits/uses_allocator.h:
-
-/usr/include/c++/11/array:
-
-/usr/include/c++/11/bits/stl_heap.h:
-
-/usr/include/c++/11/bits/algorithmfwd.h:
-
-/usr/include/c++/11/bits/stl_algo.h:
-
-/usr/include/c++/11/bits/stl_relops.h:
 
 /usr/include/c++/11/bits/fstream.tcc:
 
@@ -300,8 +253,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/usr/include/c++/11/utility:
-
 /usr/include/errno.h:
 
 /usr/include/c++/11/cerrno:
@@ -319,8 +270,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/endian.h:
 
@@ -347,6 +296,8 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 /usr/include/c++/11/bits/functexcept.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+
+/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/Schrage.hh:
 
 /usr/include/c++/11/bits/string_view.tcc:
 
@@ -384,8 +335,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
-/usr/include/c++/11/bits/stl_tempbuf.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -397,8 +346,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
 /usr/include/c++/11/cwchar:
-
-/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/zadanie.hh:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -424,17 +371,11 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
-/usr/include/c++/11/pstl/execution_defs.h:
-
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/c++/11/bits/node_handle.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
-/usr/include/c++/11/functional:
 
 /usr/include/asm-generic/errno-base.h:
 
@@ -468,8 +409,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/c++/11/bits/std_function.h:
-
 /usr/include/c++/11/bits/allocator.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
@@ -494,8 +433,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/c++/11/bits/postypes.h:
 
-/usr/include/c++/11/bits/invoke.h:
-
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/c++/11/exception:
@@ -510,19 +447,13 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/c++/11/tuple:
-
 /usr/include/c++/11/type_traits:
-
-/usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/11/string:
-
-/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
@@ -554,7 +485,7 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
-/usr/include/c++/11/bits/unordered_map.h:
+/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/Zadanie.hh:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
@@ -567,8 +498,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/c++/11/unordered_map:
 
 /usr/include/c++/11/cctype:
 
@@ -630,8 +559,6 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
-/usr/include/c++/11/algorithm:
-
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/c++/11/iostream:
@@ -649,7 +576,5 @@ CMakeFiles/rpq.dir/src/main.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algoryt
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:
-
-/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/problem_rpq.hh:
 
 /usr/include/c++/11/bits/stl_construct.h:

@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.24)
 project(rp LANGUAGES CXX)
 
-add_library(task src/zadanie.cpp)
+add_library(task src/Zadanie.cpp)
 target_include_directories(task PRIVATE inc)
 
-add_library(problem_rpq src/problem_rpq.cpp)
+add_library(problem_rpq src/Schrage.cpp)
 target_include_directories(problem_rpq PRIVATE inc)
 target_link_libraries(problem_rpq task)
 

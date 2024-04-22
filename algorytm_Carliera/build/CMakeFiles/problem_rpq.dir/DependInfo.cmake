@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/problem_rpq.cpp" "CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o" "gcc" "CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o.d"
+  "/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Schrage.cpp" "CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o" "gcc" "CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o.d"
   )
 
 # Targets to which this target links.

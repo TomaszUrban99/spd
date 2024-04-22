@@ -14,21 +14,23 @@ int problem_rpq::partition_zbior_zadan ( int start, int end ){
     int pivot = _zbior_zadan[start].get_r();
  
     int count = 0;
-    
+
     for (int i = start + 1; i <= end; i++) {
         if (_zbior_zadan[i].get_r() >= pivot)
             count++;
     }
- 
+
     // Giving pivot element its correct position
     int pivotIndex = start + count;
+
+
     std::swap(_zbior_zadan[pivotIndex], _zbior_zadan[start]);
  
     // Sorting left and right parts of the pivot element
     int i = start, j = end;
  
     while (i < pivotIndex && j > pivotIndex) {
- 
+
         while (_zbior_zadan[i].get_r() >= pivot) {
             i++;
         }
@@ -86,15 +88,23 @@ void problem_rpq::quicksort_zbior_zadan( int start, int end ){
         // base case
     if (start >= end)
         return;
+
+    std::cout << "kk" << std::endl;
  
     // partitioning the array
     int p = partition_zbior_zadan(start, end);
+
+     std::cout << "kk2" << std::endl;
  
     // Sorting the left part
     quicksort_zbior_zadan(start, p - 1);
+
+         std::cout << "kk3" << std::endl;
  
     // Sorting the right part
     quicksort_zbior_zadan(p + 1, end);
+
+         std::cout << "kk4" << std::endl;
 }
 
 void problem_rpq::quicksort_gotowe_do_realizacji( int start, int end ){
@@ -152,7 +162,9 @@ int problem_rpq::schrage( std::vector<zadanie> &gotowa_lista ){
         Sortowanie zbioru zadan na podstawie czasu
         przygotowania (wartosc r). Kolejnosc malejąca.
     */
-    quicksort_zbior_zadan(0, _zbior_zadan.size()-1);
+
+   /* tutaj !!!! */
+    quicksort_zbior_zadan(0, _zbior_zadan.size()-1); 
     
     int t = 0;
     int k = 0;
@@ -170,6 +182,7 @@ int problem_rpq::schrage( std::vector<zadanie> &gotowa_lista ){
 
             /* Usuń ostatni element z listy */
             zbior_zadan_index--;
+
         }
 
         if ( _gotowe_do_realizacji.empty() ){
@@ -177,9 +190,11 @@ int problem_rpq::schrage( std::vector<zadanie> &gotowa_lista ){
         }
         else
         {
+
             quicksort_gotowe_do_realizacji(0,_gotowe_do_realizacji.size()-1);            
-            
+             
             gotowa_lista[k] = std::move(_gotowe_do_realizacji.back());
+
             _gotowe_do_realizacji.pop_back();
 
             t += gotowa_lista[k].get_pa();
@@ -252,6 +267,42 @@ int problem_rpq::preschrage(){
     return Cmax;
 }
 
+int problem_rpq::find_minimum_r(int begin, int end, std::vector<zadanie> &permutacja ){
+
+    /* Assign first element from vector to min_r */
+    int min_r = permutacja[begin].get_r();
+    int min_index = begin;
+
+    for ( int i = begin+1; i <= end; ++i ){
+        
+        if ( permutacja[i].get_r() < min_r ){
+            
+            min_r = permutacja[i].get_r();
+            min_index = i;
+        }
+    }
+
+    return min_index;
+}
+
+int problem_rpq::find_minimum_q(int begin, int end, std::vector<zadanie> &permutacja ){
+
+    /* Assign first element from vector to min_r */
+    int min_q = permutacja[begin].get_q();
+    int min_index = begin;
+
+    for ( int i = begin+1; i <= end; ++i ){
+        
+        if ( permutacja[i].get_q() < min_q ){
+            
+            min_q = permutacja[i].get_q();
+            min_index = i;
+        }
+    }
+
+    return min_index;
+}
+
 int problem_rpq::wylicz_koniec ( int end, std::vector<zadanie> &permutacja ){
 
 }
@@ -268,31 +319,120 @@ int problem_rpq::wyznacz_b ( int Cmax, std::vector<zadanie> &permutacja ){
     return i;
 }
 
-int problem_rpq::wyznacz_c ( std::vector<zadanie> &permutacja ){
+ int problem_rpq::suma_p ( int begin, int end, std::vector<zadanie> &permutacja ){
 
+    int sum = 0;
+
+    for ( int i = begin; i < end; ++i ){
+        sum += permutacja[i].get_p();
+    }
+
+    return sum;
+ }
+
+int problem_rpq::wyznacz_a ( int c, int b, std::vector<zadanie> &permutacja ) {
+
+    for ( int i = 0; i < b; ++i ){
+
+        if ( c == 
+            permutacja[i].get_r() + suma_p(i,b,permutacja) + permutacja[b].get_q())
+            {
+                return i;
+            }
+    }
+
+    return 0;
+}
+
+int problem_rpq::wyznacz_c ( int a, int b, std::vector<zadanie> &permutacja ){
+
+
+    for ( int i = b-1; i > a; --i ){
+
+        if (permutacja[i].get_q() < permutacja[b].get_q()){
+            return i;
+        }
+    }
+
+    return 0;
 }
 
 std::vector<zadanie>& problem_rpq::carlier( int UB, std::vector<zadanie> &permutacja ){
 
     int U = schrage(permutacja);
 
+
     if ( U < UB ){
         UB = U;
-        _gotowa_lista = std::move(permutacja);
+        _gotowa_lista = permutacja;
     }
 
 
+    int b = wyznacz_b(U,permutacja);
+    int a = wyznacz_a(U,b,permutacja);
+    int c = wyznacz_c(a,b,permutacja);
 
+    if ( !c ){
+        return _gotowa_lista;
+    }
+
+    int r_prim = find_minimum_r(c+1, b, permutacja);
+    int q_prim = find_minimum_q(c+1, b, permutacja);
+    int p_prim = suma_p(c+1, b, permutacja);
+
+    int rpc_copy = permutacja[c].get_r();
+    permutacja[c].get_r() = std::max(permutacja[c].get_r(), r_prim + p_prim);
+
+    int LB = preschrage();
+
+    if (LB < UB){
+        carlier(UB,permutacja);
+    }
+
+    permutacja[c].get_r() = rpc_copy;
+
+    int qpc_copy = permutacja[c].get_q();
+    permutacja[c].get_q() = std::max(permutacja[c].get_q(), q_prim + p_prim);
+
+    LB = preschrage();
+
+    if (LB < UB){
+        carlier(UB,permutacja);
+    }
+
+    permutacja[c].get_q() = qpc_copy;
+
+    return _gotowa_lista;
 
 }
 
-/*int problem_rpq::carlier(){
+int problem_rpq::wylicz_cmax ( std::vector<zadanie> &permutacja ){
 
-    int UB = 1000000000000000;
+    int max_cmax = 0;
+    int temp = 0;
 
-    carlier(UB);
+    for ( int i = 0; i < permutacja.size(); ++i ){
 
-}*/
+        temp = permutacja[i].get_t() + permutacja[i].get_q();
+
+        if ( max_cmax < temp ){
+            max_cmax = temp;
+        }
+    }
+
+    return max_cmax;
+}
+
+int problem_rpq::carlier(){
+
+    int UB = 100000000;
+    std::vector<zadanie> permutacja = _zbior_zadan;
+
+    carlier(UB, permutacja);
+
+    return wylicz_cmax(permutacja);
+
+}
 
 void problem_rpq::print(){
 

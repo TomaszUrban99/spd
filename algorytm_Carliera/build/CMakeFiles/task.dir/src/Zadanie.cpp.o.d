@@ -1,6 +1,8 @@
-CMakeFiles/rpq.dir/src/main.cpp.o: \
- /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+CMakeFiles/task.dir/src/Zadanie.cpp.o: \
+ /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Zadanie.cpp \
+ /usr/include/stdc-predef.h \
+ /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/Zadanie.hh \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -149,10 +151,4 @@ CMakeFiles/rpq.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/Schrage.hh \
- /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
- /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
- /usr/include/c++/11/bits/fstream.tcc \
- /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/inc/Zadanie.hh
+ /usr/include/c++/11/bits/vector.tcc

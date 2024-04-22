@@ -69,28 +69,28 @@ include CMakeFiles/problem_rpq.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/problem_rpq.dir/flags.make
 
-CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o: CMakeFiles/problem_rpq.dir/flags.make
-CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/problem_rpq.cpp
-CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o: CMakeFiles/problem_rpq.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o -MF CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o.d -o CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o -c /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/problem_rpq.cpp
+CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o: CMakeFiles/problem_rpq.dir/flags.make
+CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Schrage.cpp
+CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o: CMakeFiles/problem_rpq.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o -MF CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o.d -o CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o -c /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Schrage.cpp
 
-CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/problem_rpq.cpp > CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.i
+CMakeFiles/problem_rpq.dir/src/Schrage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/problem_rpq.dir/src/Schrage.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Schrage.cpp > CMakeFiles/problem_rpq.dir/src/Schrage.cpp.i
 
-CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/problem_rpq.cpp -o CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.s
+CMakeFiles/problem_rpq.dir/src/Schrage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/problem_rpq.dir/src/Schrage.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Schrage.cpp -o CMakeFiles/problem_rpq.dir/src/Schrage.cpp.s
 
 # Object files for target problem_rpq
 problem_rpq_OBJECTS = \
-"CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o"
+"CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o"
 
 # External object files for target problem_rpq
 problem_rpq_EXTERNAL_OBJECTS =
 
-libproblem_rpq.a: CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o
+libproblem_rpq.a: CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o
 libproblem_rpq.a: CMakeFiles/problem_rpq.dir/build.make
 libproblem_rpq.a: CMakeFiles/problem_rpq.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libproblem_rpq.a"

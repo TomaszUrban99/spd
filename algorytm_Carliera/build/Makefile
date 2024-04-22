@@ -155,6 +155,54 @@ rpq/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpq.dir/build.make CMakeFiles/rpq.dir/build
 .PHONY : rpq/fast
 
+src/Schrage.o: src/Schrage.cpp.o
+.PHONY : src/Schrage.o
+
+# target to build an object file
+src/Schrage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o
+.PHONY : src/Schrage.cpp.o
+
+src/Schrage.i: src/Schrage.cpp.i
+.PHONY : src/Schrage.i
+
+# target to preprocess a source file
+src/Schrage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/src/Schrage.cpp.i
+.PHONY : src/Schrage.cpp.i
+
+src/Schrage.s: src/Schrage.cpp.s
+.PHONY : src/Schrage.s
+
+# target to generate assembly for a file
+src/Schrage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/src/Schrage.cpp.s
+.PHONY : src/Schrage.cpp.s
+
+src/Zadanie.o: src/Zadanie.cpp.o
+.PHONY : src/Zadanie.o
+
+# target to build an object file
+src/Zadanie.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/Zadanie.cpp.o
+.PHONY : src/Zadanie.cpp.o
+
+src/Zadanie.i: src/Zadanie.cpp.i
+.PHONY : src/Zadanie.i
+
+# target to preprocess a source file
+src/Zadanie.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/Zadanie.cpp.i
+.PHONY : src/Zadanie.cpp.i
+
+src/Zadanie.s: src/Zadanie.cpp.s
+.PHONY : src/Zadanie.s
+
+# target to generate assembly for a file
+src/Zadanie.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/Zadanie.cpp.s
+.PHONY : src/Zadanie.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -179,54 +227,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpq.dir/build.make CMakeFiles/rpq.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/problem_rpq.o: src/problem_rpq.cpp.o
-.PHONY : src/problem_rpq.o
-
-# target to build an object file
-src/problem_rpq.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o
-.PHONY : src/problem_rpq.cpp.o
-
-src/problem_rpq.i: src/problem_rpq.cpp.i
-.PHONY : src/problem_rpq.i
-
-# target to preprocess a source file
-src/problem_rpq.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.i
-.PHONY : src/problem_rpq.cpp.i
-
-src/problem_rpq.s: src/problem_rpq.cpp.s
-.PHONY : src/problem_rpq.s
-
-# target to generate assembly for a file
-src/problem_rpq.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.s
-.PHONY : src/problem_rpq.cpp.s
-
-src/zadanie.o: src/zadanie.cpp.o
-.PHONY : src/zadanie.o
-
-# target to build an object file
-src/zadanie.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/zadanie.cpp.o
-.PHONY : src/zadanie.cpp.o
-
-src/zadanie.i: src/zadanie.cpp.i
-.PHONY : src/zadanie.i
-
-# target to preprocess a source file
-src/zadanie.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/zadanie.cpp.i
-.PHONY : src/zadanie.cpp.i
-
-src/zadanie.s: src/zadanie.cpp.s
-.PHONY : src/zadanie.s
-
-# target to generate assembly for a file
-src/zadanie.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/zadanie.cpp.s
-.PHONY : src/zadanie.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -238,15 +238,15 @@ help:
 	@echo "... problem_rpq"
 	@echo "... rpq"
 	@echo "... task"
+	@echo "... src/Schrage.o"
+	@echo "... src/Schrage.i"
+	@echo "... src/Schrage.s"
+	@echo "... src/Zadanie.o"
+	@echo "... src/Zadanie.i"
+	@echo "... src/Zadanie.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/problem_rpq.o"
-	@echo "... src/problem_rpq.i"
-	@echo "... src/problem_rpq.s"
-	@echo "... src/zadanie.o"
-	@echo "... src/zadanie.i"
-	@echo "... src/zadanie.s"
 .PHONY : help
 
 

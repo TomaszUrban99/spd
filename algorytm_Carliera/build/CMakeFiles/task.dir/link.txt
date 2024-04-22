@@ -1,2 +1,2 @@
-/usr/bin/ar qc libtask.a CMakeFiles/task.dir/src/zadanie.cpp.o
+/usr/bin/ar qc libtask.a CMakeFiles/task.dir/src/Zadanie.cpp.o
 /usr/bin/ranlib libtask.a

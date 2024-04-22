@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/zadanie.cpp" "CMakeFiles/task.dir/src/zadanie.cpp.o" "gcc" "CMakeFiles/task.dir/src/zadanie.cpp.o.d"
+  "/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Zadanie.cpp" "CMakeFiles/task.dir/src/Zadanie.cpp.o" "gcc" "CMakeFiles/task.dir/src/Zadanie.cpp.o.d"
   )
 
 # Targets to which this target links.

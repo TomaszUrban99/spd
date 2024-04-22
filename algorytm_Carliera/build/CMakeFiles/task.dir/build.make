@@ -69,28 +69,28 @@ include CMakeFiles/task.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/task.dir/flags.make
 
-CMakeFiles/task.dir/src/zadanie.cpp.o: CMakeFiles/task.dir/flags.make
-CMakeFiles/task.dir/src/zadanie.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/zadanie.cpp
-CMakeFiles/task.dir/src/zadanie.cpp.o: CMakeFiles/task.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task.dir/src/zadanie.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task.dir/src/zadanie.cpp.o -MF CMakeFiles/task.dir/src/zadanie.cpp.o.d -o CMakeFiles/task.dir/src/zadanie.cpp.o -c /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/zadanie.cpp
+CMakeFiles/task.dir/src/Zadanie.cpp.o: CMakeFiles/task.dir/flags.make
+CMakeFiles/task.dir/src/Zadanie.cpp.o: /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Zadanie.cpp
+CMakeFiles/task.dir/src/Zadanie.cpp.o: CMakeFiles/task.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task.dir/src/Zadanie.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/task.dir/src/Zadanie.cpp.o -MF CMakeFiles/task.dir/src/Zadanie.cpp.o.d -o CMakeFiles/task.dir/src/Zadanie.cpp.o -c /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Zadanie.cpp
 
-CMakeFiles/task.dir/src/zadanie.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task.dir/src/zadanie.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/zadanie.cpp > CMakeFiles/task.dir/src/zadanie.cpp.i
+CMakeFiles/task.dir/src/Zadanie.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task.dir/src/Zadanie.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Zadanie.cpp > CMakeFiles/task.dir/src/Zadanie.cpp.i
 
-CMakeFiles/task.dir/src/zadanie.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task.dir/src/zadanie.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/zadanie.cpp -o CMakeFiles/task.dir/src/zadanie.cpp.s
+CMakeFiles/task.dir/src/Zadanie.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task.dir/src/Zadanie.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/src/Zadanie.cpp -o CMakeFiles/task.dir/src/Zadanie.cpp.s
 
 # Object files for target task
 task_OBJECTS = \
-"CMakeFiles/task.dir/src/zadanie.cpp.o"
+"CMakeFiles/task.dir/src/Zadanie.cpp.o"
 
 # External object files for target task
 task_EXTERNAL_OBJECTS =
 
-libtask.a: CMakeFiles/task.dir/src/zadanie.cpp.o
+libtask.a: CMakeFiles/task.dir/src/Zadanie.cpp.o
 libtask.a: CMakeFiles/task.dir/build.make
 libtask.a: CMakeFiles/task.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtask.a"

@@ -31,7 +31,7 @@ class problem_rpq{
         _zbior_zadan = zbior_zadan;
 
         /* Rezerwacja miejsca dla wektorów */
-        _gotowa_lista.reserve(_zbior_zadan.size());
+        _gotowa_lista.resize(_zbior_zadan.size());
         _gotowe_do_realizacji.reserve(_zbior_zadan.size());
     }
 
@@ -49,9 +49,15 @@ class problem_rpq{
 
     int wyznacz_b ( int Cmax, std::vector<zadanie> &permutacja );
 
-    int wyznacz_a ( std::vector<zadanie> &permutacja );
+    int wyznacz_a (  int c, int b, std::vector<zadanie> &permutacja );
 
-    int wyznacz_c ( std::vector<zadanie> &permutacja );
+    /*!
+        \brief Wyznaczenie zadania interferencyjnego
+        \par indeks zadania najdalszego
+    */
+    int wyznacz_c ( int a, int b, std::vector<zadanie> &permutacja );
+
+    int suma_p ( int begin, int end, std::vector<zadanie> &permutacja );
 
     int carlier ();
 
@@ -64,6 +70,12 @@ class problem_rpq{
     int partition_zbior_zadan ( int start, int end );
 
     int partition_gotowe_do_realizacji ( int start, int end );
+
+    int find_minimum_r ( int begin, int end, std::vector<zadanie> &permutacja );
+
+    int find_minimum_q ( int begin, int end, std::vector<zadanie> &permutacja );
+
+    int wylicz_cmax ( std::vector<zadanie> &permutacja );
 
 };
 

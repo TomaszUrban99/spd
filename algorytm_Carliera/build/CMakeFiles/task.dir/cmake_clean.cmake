@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/task.dir/src/zadanie.cpp.o"
-  "CMakeFiles/task.dir/src/zadanie.cpp.o.d"
+  "CMakeFiles/task.dir/src/Zadanie.cpp.o"
+  "CMakeFiles/task.dir/src/Zadanie.cpp.o.d"
   "libtask.a"
   "libtask.pdb"
 )

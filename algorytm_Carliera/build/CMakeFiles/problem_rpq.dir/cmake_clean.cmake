@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o"
-  "CMakeFiles/problem_rpq.dir/src/problem_rpq.cpp.o.d"
+  "CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o"
+  "CMakeFiles/problem_rpq.dir/src/Schrage.cpp.o.d"
   "libproblem_rpq.a"
   "libproblem_rpq.pdb"
 )
