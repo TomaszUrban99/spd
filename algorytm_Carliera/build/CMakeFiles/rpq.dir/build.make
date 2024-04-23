@@ -93,6 +93,8 @@ rpq_EXTERNAL_OBJECTS =
 rpq: CMakeFiles/rpq.dir/src/main.cpp.o
 rpq: CMakeFiles/rpq.dir/build.make
 rpq: libproblem_rpq.a
+rpq: libCarlier.a
+rpq: libproblem_rpq.a
 rpq: libtask.a
 rpq: CMakeFiles/rpq.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable rpq"

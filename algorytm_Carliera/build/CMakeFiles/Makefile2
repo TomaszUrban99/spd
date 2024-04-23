@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build
 # The main recursive "all" target.
 all: CMakeFiles/task.dir/all
 all: CMakeFiles/problem_rpq.dir/all
+all: CMakeFiles/Carlier.dir/all
 all: CMakeFiles/rpq.dir/all
 .PHONY : all
 
@@ -75,6 +76,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/task.dir/clean
 clean: CMakeFiles/problem_rpq.dir/clean
+clean: CMakeFiles/Carlier.dir/clean
 clean: CMakeFiles/rpq.dir/clean
 .PHONY : clean
 
@@ -85,7 +87,7 @@ clean: CMakeFiles/rpq.dir/clean
 CMakeFiles/task.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=5,6 "Built target task"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=7,8 "Built target task"
 .PHONY : CMakeFiles/task.dir/all
 
 # Build rule for subdir invocation for target.
@@ -111,7 +113,7 @@ CMakeFiles/task.dir/clean:
 CMakeFiles/problem_rpq.dir/all: CMakeFiles/task.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/problem_rpq.dir/build.make CMakeFiles/problem_rpq.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=1,2 "Built target problem_rpq"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=3,4 "Built target problem_rpq"
 .PHONY : CMakeFiles/problem_rpq.dir/all
 
 # Build rule for subdir invocation for target.
@@ -131,19 +133,47 @@ CMakeFiles/problem_rpq.dir/clean:
 .PHONY : CMakeFiles/problem_rpq.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/Carlier.dir
+
+# All Build rule for target.
+CMakeFiles/Carlier.dir/all: CMakeFiles/problem_rpq.dir/all
+CMakeFiles/Carlier.dir/all: CMakeFiles/task.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Carlier.dir/build.make CMakeFiles/Carlier.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Carlier.dir/build.make CMakeFiles/Carlier.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=1,2 "Built target Carlier"
+.PHONY : CMakeFiles/Carlier.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Carlier.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Carlier.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles 0
+.PHONY : CMakeFiles/Carlier.dir/rule
+
+# Convenience name for target.
+Carlier: CMakeFiles/Carlier.dir/rule
+.PHONY : Carlier
+
+# clean rule for target.
+CMakeFiles/Carlier.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Carlier.dir/build.make CMakeFiles/Carlier.dir/clean
+.PHONY : CMakeFiles/Carlier.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/rpq.dir
 
 # All Build rule for target.
-CMakeFiles/rpq.dir/all: CMakeFiles/task.dir/all
 CMakeFiles/rpq.dir/all: CMakeFiles/problem_rpq.dir/all
+CMakeFiles/rpq.dir/all: CMakeFiles/Carlier.dir/all
+CMakeFiles/rpq.dir/all: CMakeFiles/task.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpq.dir/build.make CMakeFiles/rpq.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rpq.dir/build.make CMakeFiles/rpq.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=3,4 "Built target rpq"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles --progress-num=5,6 "Built target rpq"
 .PHONY : CMakeFiles/rpq.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rpq.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rpq.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/SPD/spd/algorytm_Carliera/build/CMakeFiles 0
 .PHONY : CMakeFiles/rpq.dir/rule
